@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# This module is used to generate tags
 module Tag
-  def self.build(name, attributes = {}, &block)
+  def self.build(name, attributes = {})
     attrs = attributes.map { |k, v| " #{k}=\"#{v}\"" }.join
     content = block_given? ? yield : ''
     case name
