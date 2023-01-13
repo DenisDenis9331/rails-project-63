@@ -1,10 +1,10 @@
 # Makefile
 
-install: # установить зависимости
+install: # install dependencies
 	bundle install
 
-lint: # проверить стиль кода
+lint: # check code style
 	bundle exec rubocop
 
-tests: # запустить тесты
+tests: # run tests
 	bundle exec rake test
