@@ -7,6 +7,7 @@ module HexletCode
   autoload(:Tag, 'tag')
 
   User = Struct.new(:name, :job, keyword_init: true)
+  user = User.new(name: 'rob', job: 'hexlet')
 
   def self.form_for(user, url: '#')
     Tag.build('form', action: url, method: 'post')

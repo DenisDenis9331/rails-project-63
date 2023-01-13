@@ -10,11 +10,13 @@ class HexletCodeTest < Minitest::Test
   def init_user
     @user = User.new(name: 'rob', job: 'hexlet')
   end
+
   def test_form_for_with_url
     form = HexletCode.form_for @user, url: '/users' do |f|
     end
     assert_equal '<form action="/users" method="post"></form>', form
   end
+
   def test_form_for_without_url
     form = HexletCode.form_for @user do |f|
     end
